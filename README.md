@@ -8,4 +8,5 @@ This is a simple p5 extension to provide Web Speech API functionality.  It consi
 ##Simple Example
 
 var foo = new P5.Speech();
+
 foo.speak('hi there');
