@@ -1,0 +1,80 @@
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/addons/p5.dom.js"></script>
+	<script src="../lib/p5.speech.js"></script>
+	<script>
+
+	var myVoice = new p5.Speech('Google UK English Male'); // new P5.Speech object
+
+	myVoice.onLoad = speechLoaded;
+	myVoice.onStart = speechStarted;
+	myVoice.onPause = speechPaused; // not working
+	myVoice.onResume = speechResumed; // not working
+	myVoice.onEnd = speechEnded;
+
+	var lyric = "now is the winter of our discontent.  made glorious summer by this sun of york.  and all the clouds that lou'red upon our house.  in the deep bosom of the ocean buried.";
+
+	var speakbutton; // UI
+
+	function setup()
+	{
+		createCanvas(400, 400);
+
+		// button:
+		speakbutton = createButton('Speak');
+  		speakbutton.position(180, 200);
+  		speakbutton.mousePressed(buttonClicked);
+
+	}
+
+	function draw()
+	{
+		// why draw when you can click?
+	}
+
+	function buttonClicked()
+	{
+		if(speakbutton.elt.innerHTML=='Speak') myVoice.speak(lyric);
+		else if(speakbutton.elt.innerHTML=='Pause') myVoice.pause(); // not working
+		else if(speakbutton.elt.innerHTML=='Resume') myVoice.resume(); // not working
+		else if(speakbutton.elt.innerHTML=='Stop') myVoice.stop();
+	}
+
+	function speechLoaded()
+	{
+  		// say cheers:
+		myVoice.speak("yeah, baby!!!");
+	}
+
+	function speechStarted()
+	{
+		background(0, 255, 0);
+		speakbutton.elt.innerHTML = 'Stop';
+	}
+
+	// not working...
+	function speechPaused()
+	{
+		background(0, 255, 0);
+		speakbutton.elt.innerHTML = 'Resume';
+	}
+
+	// not working...
+	function speechResumed()
+	{
+		background(0, 255, 0);
+		speakbutton.elt.innerHTML = 'Pause';
+	}
+
+	function speechEnded()
+	{
+		background(255, 0, 0);
+		speakbutton.elt.innerHTML = 'Speak';
+	}
+
+</script>
+</head>
+<body>
+</body>
+</html>
