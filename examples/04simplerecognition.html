@@ -1,0 +1,43 @@
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/addons/p5.dom.js"></script>
+	<script src="../lib/p5.speech.js"></script>
+	<script>
+
+	var myRec = new p5.SpeechRec(); // new P5.SpeechRec object
+
+
+	function setup()
+	{
+		// graphics stuff:
+		createCanvas(400, 400);
+		background(255, 0, 0);
+		fill(255, 255, 255, 100);
+		// instructions:
+		textSize(50);
+		textAlign(CENTER);
+		text("say something", width/2, height/2);
+		myRec.onResult = showResult;
+		myRec.start();
+	}
+
+	function draw()
+	{
+		// why draw when you can talk?
+	}
+
+	function showResult()
+	{
+		if(myRec.resultValue==true) {
+			background(255, 0, 0);
+			text(myRec.resultString, width/2, height/2);
+			console.log(myRec.resultString);
+		}
+	}
+
+</script>
+</head>
+<body>
+</body>
+</html>
