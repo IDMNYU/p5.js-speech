@@ -8,7 +8,7 @@
 	var myVoice = new p5.Speech(); // new P5.Speech object
 
 	var menuLoaded = 0;
-	var label, input, speakbutton, vslider, rslider, pslider; // UI
+	var label, input, checkbox, speakbutton, vslider, rslider, pslider; // UI
 
 	function setup()
 	{
@@ -16,6 +16,12 @@
 		input = createInput("yeah, baby!!!");
 		input.style("width", 400);
   		input.position(20, 65);
+		// checkbox:
+		checkbox = createInput(0, 1, 0);
+		checkbox.attribute("type", "checkbox");
+		checkbox.style("width", "15px");
+		checkbox.style("height", "15px");
+  		checkbox.position(100, 100);
 		// button:
 		speakbutton = createButton('Speak');
   		speakbutton.position(20, 100);
@@ -33,6 +39,8 @@
 		// labels:
 		label = createDiv("say something:");
 		label.position(20, 40);
+		label = createDiv("interrupt?");
+		label.position(125, 100);
 		label = createDiv("volume");
 		label.position(160, 140);
 		label = createDiv("rate");
@@ -65,6 +73,7 @@
 
 	function doSpeak()
 	{
+		myVoice.interrupt = checkbox.elt.checked;
 		myVoice.speak(input.value()); // debug printer for voice options
 	}
 
