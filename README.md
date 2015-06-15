@@ -1,5 +1,5 @@
 # p5.js-speech
-Web Audio Speech Synthesis and Speech Recognition Implementation for p5.js
+Web Audio Speech Synthesis and Speech Recognition Implementation for p5.js (http://p5js.org)
 
 R. Luke DuBois (dubois@nyu.edu)
 
