@@ -11,11 +11,11 @@
 	function setup()
 	{
 		// graphics stuff:
-		createCanvas(400, 400);
-		background(255, 0, 0);
-		fill(255, 255, 255, 100);
+		createCanvas(800, 400);
+		background(255, 255, 255);
+		fill(0, 0, 0, 255);
 		// instructions:
-		textSize(50);
+		textSize(32);
 		textAlign(CENTER);
 		text("say something", width/2, height/2);
 		myRec.onResult = showResult;
@@ -30,7 +30,7 @@
 	function showResult()
 	{
 		if(myRec.resultValue==true) {
-			background(255, 0, 0);
+			background(192, 255, 192);
 			text(myRec.resultString, width/2, height/2);
 			console.log(myRec.resultString);
 		}
