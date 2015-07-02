@@ -16,7 +16,7 @@ var foo = new P5.SpeechRec();
 foo.onResult = showResult;
 foo.start();
 
-function onResult()
+function showResult()
 {
   console.log(foo.resultString);
 }
