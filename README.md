@@ -2,7 +2,7 @@
 Web Audio Speech Synthesis and Speech Recognition Implementation for p5.js (http://p5js.org)
 
 R. Luke DuBois (dubois@nyu.edu)   
-ABILITY Lab / Brooklyn Experimental Media Center    
+[ABILITY Lab](http://abilitylab.nyu.edu) / [Brooklyn Experimental Media Center](http://bxmc.poly.edu)   
 NYU
 
 This is a simple p5 extension to provide Web Speech (Synthesis and Recognition) API functionality.  It consists of two object classes (p5.Speech and p5.SpeechRec) along with accessor functions to speak and listen for text, change parameters (synthesis voices, recognition models, etc.), and retrieve callbacks from the system.
