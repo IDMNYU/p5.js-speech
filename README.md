@@ -11,17 +11,17 @@ Speech recognition requires launching from a server (e.g. a python simpleserver 
 
 ##Simple Example (Synthesis)
 ```
-var foo = new P5.Speech();
-foo.speak('hi there');
+var foo = new P5.Speech(); // speech synthesis object
+foo.speak('hi there'); // say something
 ```
 ##Simple Example (Recognition)
 ```
-var foo = new P5.SpeechRec();
-foo.onResult = showResult;
-foo.start();
+var foo = new P5.SpeechRec(); // speech recognition object (will prompt for mic access)
+foo.onResult = showResult; // bind callback function to trigger when speech is recognized
+foo.start(); // start listening
 
 function showResult()
 {
-  console.log(foo.resultString);
+  console.log(foo.resultString); // log the result
 }
 ```
