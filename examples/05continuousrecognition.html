@@ -43,11 +43,11 @@
 		if(y>height) y = 0;
 	}
 
-	function parseResult()
+	function parseResult(result)
 	{
 		// recognition system will often append words into phrases.
 		// so hack here is to only use the last word:
-		var mostrecentword = myRec.resultString.split(' ').pop();
+		var mostrecentword = result.text.split(' ').pop();
 		if(mostrecentword.indexOf("left")!==-1) { dx=-1;dy=0; }
 		else if(mostrecentword.indexOf("right")!==-1) { dx=1;dy=0; }
 		else if(mostrecentword.indexOf("up")!==-1) { dx=0;dy=-1; }
