@@ -16,7 +16,7 @@ var voice = new p5.Speech(); // speech synthesis object
 voice.speak('hi there'); // say something
 ```
 
-##Simple Example (Recognition)
+## Simple Example (Recognition)
 
 ```javascript
 var speechRec = new p5.SpeechRec(gotSpeech); // speech recognition object (will prompt for mic access)
