@@ -6,8 +6,6 @@
 	<script>
 
 	var myRec = new p5.SpeechRec(); // new P5.SpeechRec object
-	myRec.continuous = true; // do continuous recognition
-	myRec.interimResults = true; // allow partial recognition (faster, less accurate)
 
 	var x, y;
 	var dx, dy;
@@ -29,7 +27,9 @@
 		text("draw: up, down, left, right, clear", 20, 20);
 
 		myRec.onResult = parseResult; // recognition callback
-		myRec.start(); // start engine
+		
+		// start with do continuous recognition and allow partial recognition (faster, less accurate)
+		myRec.start(true, true); // start engine
 	}
 
 	function draw()
