@@ -28,8 +28,10 @@
 
 		myRec.onResult = parseResult; // recognition callback
 		
-		// start with do continuous recognition and allow partial recognition (faster, less accurate)
-		myRec.start(true, true); // start engine
+		// start with continuous recognition and allow partial recognition (faster, less accurate)
+		var continuous = true;
+		var interimResults = true;
+		myRec.start(continuous, interimResults); // start engine
 	}
 
 	function draw()
