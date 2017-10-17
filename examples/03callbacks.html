@@ -5,9 +5,9 @@
 	<script src="../lib/p5.speech.js"></script>
 	<script>
 
-	var myVoice = new p5.Speech('Google UK English Male'); // new P5.Speech object
+	var myVoice = new p5.Speech('Google UK English Male', speechLoaded); // new P5.Speech object
 
-	myVoice.onLoad = speechLoaded;
+	//myVoice.onLoad = speechLoaded; // could do it this way
 	myVoice.onStart = speechStarted;
 	myVoice.onPause = speechPaused; // not working
 	myVoice.onResume = speechResumed; // not working
