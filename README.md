@@ -9,12 +9,12 @@ This is a simple p5 extension to provide Web Speech (Synthesis and Recognition) 
 
 Speech recognition requires launching from a server (e.g. a python simpleserver on a local machine).
 
-##Simple Example (Synthesis)
+**Simple Example (Synthesis)
 ```
 var foo = new P5.Speech(); // speech synthesis object
 foo.speak('hi there'); // say something
 ```
-##Simple Example (Recognition)
+**Simple Example (Recognition)
 ```
 var foo = new P5.SpeechRec(); // speech recognition object (will prompt for mic access)
 foo.onResult = showResult; // bind callback function to trigger when speech is recognized
