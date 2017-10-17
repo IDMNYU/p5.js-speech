@@ -5,7 +5,7 @@
 	<script src="../lib/p5.speech.js"></script>
 	<script>
 
-	var myRec = new p5.SpeechRec(); // new P5.SpeechRec object
+	var myRec = new p5.SpeechRec('en-US', parseResult); // new P5.SpeechRec object
 	myRec.continuous = true; // do continuous recognition
 	myRec.interimResults = true; // allow partial recognition (faster, less accurate)
 
@@ -28,7 +28,7 @@
 		textAlign(LEFT);
 		text("draw: up, down, left, right, clear", 20, 20);
 
-		myRec.onResult = parseResult; // recognition callback
+		//myRec.onResult = parseResult; // now in the constructor
 		myRec.start(); // start engine
 	}
 
@@ -43,11 +43,11 @@
 		if(y>height) y = 0;
 	}
 
-	function parseResult(result)
+	function parseResult()
 	{
 		// recognition system will often append words into phrases.
 		// so hack here is to only use the last word:
-		var mostrecentword = result.text.split(' ').pop();
+		var mostrecentword = myRec.resultString.split(' ').pop();
 		if(mostrecentword.indexOf("left")!==-1) { dx=-1;dy=0; }
 		else if(mostrecentword.indexOf("right")!==-1) { dx=1;dy=0; }
 		else if(mostrecentword.indexOf("up")!==-1) { dx=0;dy=-1; }
