@@ -1,0 +1,55 @@
+<html>
+<head>
+	<meta http-equiv="refresh" content="300">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/addons/p5.dom.js"></script>
+	<script src="p5.speech.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+	<script>
+
+	var myRec = new p5.SpeechRec('en-US', parseResult); // new P5.SpeechRec object
+	myRec.continuous = true; // do continuous recognition
+	myRec.interimResults = true; // allow partial recognition (faster, less accurate)
+
+	var x, y;
+	var dx, dy;
+
+	var socket;
+
+	function setup()
+	{
+		// graphics stuff:
+		createCanvas(800, 600);
+		background(255, 255, 255);
+
+		// instructions:
+		textSize(48);
+		textAlign(CENTER);
+
+		myRec.start(); // start engine
+
+		// client-side socket.io:
+		socket = io();
+
+		noLoop();
+	}
+
+	function draw()
+	{
+
+	}
+
+	function parseResult()
+	{
+		// recognition system will often append words into phrases.
+		var res = myRec.resultString;
+		background(255);
+		text(res, width/2, height/2);
+		socket.emit('result', { 'word': res });
+	}
+
+</script>
+</head>
+<body>
+</body>
+</html>
