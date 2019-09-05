@@ -32,11 +32,11 @@ function showResult()
 ```
 ### More Examples
 
-* [p5.Speech() Simple](https://idmnyu.github.io/p5.js-func/examples/01simple.html) [(source)](https://github.com/IDMNYU/p5.js-func/blob/master/examples/01simple.html)
-* [p5.Speech() Speech Box](https://idmnyu.github.io/p5.js-func/examples/02speechbox.html) [(source)](https://github.com/IDMNYU/p5.js-func/blob/master/examples/01speechbox.html)
-* [p5.Speech() Callbacks](https://idmnyu.github.io/p5.js-func/examples/03callbacks.html) [(source)](https://github.com/IDMNYU/p5.js-func/blob/master/examples/03callbacks.html)
-* [p5.SpeechRec() Simple](https://idmnyu.github.io/p5.js-func/examples/04simplerecognition.html) [(source)](https://github.com/IDMNYU/p5.js-func/blob/master/examples/04simplerecognition.html)
-* [p5.SpeechRec() Continuous](https://idmnyu.github.io/p5.js-func/examples/05continuousrecognition.html) [(source)](https://github.com/IDMNYU/p5.js-func/blob/master/examples/05continuousrecognition.html)
+* [p5.Speech() Simple](https://idmnyu.github.io/p5.js-speech/examples/01simple.html) [(source)](https://github.com/IDMNYU/p5.js-speech/blob/master/examples/01simple.html)
+* [p5.Speech() Speech Box](https://idmnyu.github.io/p5.js-speech/examples/02speechbox.html) [(source)](https://github.com/IDMNYU/p5.js-speech/blob/master/examples/01speechbox.html)
+* [p5.Speech() Callbacks](https://idmnyu.github.io/p5.js-speech/examples/03callbacks.html) [(source)](https://github.com/IDMNYU/p5.js-speech/blob/master/examples/03callbacks.html)
+* [p5.SpeechRec() Simple](https://idmnyu.github.io/p5.js-speech/examples/04simplerecognition.html) [(source)](https://github.com/IDMNYU/p5.js-speech/blob/master/examples/04simplerecognition.html)
+* [p5.SpeechRec() Continuous](https://idmnyu.github.io/p5.js-speech/examples/05continuousrecognition.html) [(source)](https://github.com/IDMNYU/p5.js-speech/blob/master/examples/05continuousrecognition.html)
 
 ## Reference
 
