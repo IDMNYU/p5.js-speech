@@ -44,6 +44,7 @@ function showResult()
 
 *constructor*
 * **default_voice**: optional argument to set the default synthesizer voice by number (see *listVoices()*) or by name.
+
 *methods*
 * **cancel()**: silently cancels the current utterance and clears any queued utterances.
 * **listVoices()**: debugging statement. Lists available synthesis voices to the JavaScript console.
@@ -56,6 +57,7 @@ function showResult()
 * **setVolume(volume)**: sets synthesizer volume in the range of 0.0 (silent) to 1.0 (default=max volume).
 * **speak(utterance)**: instructs the synthesizer to speak the string encoded in utterance. Depending on the interrupt property, additional calls to *speak()* will queue after or interrupt speech actively being synthesized. When synthesis begins, the *onStart()* callback will fire; when synthesis ends, the *onEnd()* callback will fire.
 * **stop()**: stops the current utterance. The *onEnd()* callback will fire.
+
 *properties*
 * **interrupt**: boolean to set whether the *speak()* method will interrupt (true) or queue after (false = default) existing speech currently being synthesized.
 * **onEnd**: function sets callback to fire when an utterance is finished.
@@ -68,8 +70,10 @@ function showResult()
 
 *constructor*
 * **default_language**: optional argument to set the default BCP-47 language / region to for the speech recognition system.
+
 *methods*
 * **start()**: instructs the speech recognition system to begin listening. use continuous mode rather than multiple calls to *start()* for multiple recognition tokens within the same site.
+
 *properties*
 * **continuous**: boolean to set whether the speech recognition engine will give results continuously (true) or just once (false = default).
 * **interimResults**: boolean to set whether the speech recognition engine will give faster, partial results (true) or wait for the speaker to pause (false = default).
