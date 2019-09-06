@@ -70,6 +70,7 @@ function showResult()
 
 *constructor*
 * **default_language**: optional argument to set the default BCP-47 language / region to for the speech recognition system.
+  * n.b. p5.SpeechRec() won't work unless using a secure (HTTPS) server. if you never get a prompt from the browser to allow access to your microphone, that should be the first thing you troubleshoot.
 
 *methods*
 * **start()**: instructs the speech recognition system to begin listening. use continuous mode rather than multiple calls to *start()* for multiple recognition tokens within the same site.
