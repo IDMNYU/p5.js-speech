@@ -77,7 +77,7 @@ function showResult()
 
 *properties*
 * **continuous**: boolean to set whether the speech recognition engine will give results continuously (true) or just once (false = default). 
-  * **p.s. *continuous* is set to 'false' by default to protect your users' privacy: setting continuous to 'true' creates a continuous open mic between your users' browsing device and the cloud-based speech recognition engine for their browser (i.e. Google).**
+  * **p.s. *continuous* is set to 'false' by default to protect your users' privacy: setting continuous to 'true' creates a persistent open mic between your users' browsing device and the cloud-based speech recognition engine for their browser (i.e. Google).**
   * p.p.s. as an aside, besides being potentially a bad call from an ethical standpoint, *continous* mode is unreliable - the audio pipe between the browser and the recognition server breaks pretty easily, especially with non-Chrome browsers. if you really want something that will continuously recognize speech, set a meta-refresh on your page to reload every couple of minutes.
 * **interimResults**: boolean to set whether the speech recognition engine will give faster, partial results (true) or wait for the speaker to pause (false = default).
 * **onEnd**: function sets callback to fire when speech recognition ends.
