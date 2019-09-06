@@ -7,7 +7,7 @@ NYU
 
 **p5.speech** is a simple p5 extension to provide Web Speech (Synthesis and Recognition) API functionality.  It consists of two object classes (p5.Speech and p5.SpeechRec) along with accessor functions to speak and listen for text, change parameters (synthesis voices, recognition models, etc.), and retrieve callbacks from the system.
 
-Speech recognition requires launching from a server using HTTPS (e.g. a python server on a local machine).
+Speech recognition requires launching from a server using HTTPS (e.g. using a python server on a local machine... a 'file' URI won't work).
 
 ## Download
 * [Library only](https://raw.githubusercontent.com/IDMNYU/p5.js-speech/master/lib/p5.speech.js)
@@ -75,7 +75,8 @@ function showResult()
 * **start()**: instructs the speech recognition system to begin listening. use continuous mode rather than multiple calls to *start()* for multiple recognition tokens within the same site.
 
 *properties*
-* **continuous**: boolean to set whether the speech recognition engine will give results continuously (true) or just once (false = default).
+* **continuous**: boolean to set whether the speech recognition engine will give results continuously (true) or just once (false = default). 
+* * **n.b. this is set to false by default to protect your users' privacy: setting continuous to true creates a continuous open mic between your users' web browser and Google.**
 * **interimResults**: boolean to set whether the speech recognition engine will give faster, partial results (true) or wait for the speaker to pause (false = default).
 * **onEnd**: function sets callback to fire when speech recognition ends.
 * **onError**: function sets callback to fire when an error occurs on the client side in recording and transmitting the speech.
