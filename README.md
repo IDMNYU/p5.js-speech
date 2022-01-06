@@ -12,6 +12,11 @@ Speech recognition requires launching from a server using HTTPS (e.g. using a py
 ## Download
 * [Library only](https://raw.githubusercontent.com/IDMNYU/p5.js-speech/master/lib/p5.speech.js)
 
+## Include from a CDN
+```
+<script src="https://cdn.jsdelivr.net/gh/IDMNYU/p5.js-speech@0.0.2/lib/p5.speech.js"></script>
+```
+
 ## Examples
 
 ### Simple Example (Synthesis)
