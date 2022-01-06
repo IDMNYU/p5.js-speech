@@ -1,0 +1,4 @@
+theme: jekyll-theme-minimal
+title: p5.speech
+description: Speech synthesis and recognition for p5.js
+show_downloads: "true"
