@@ -14,7 +14,7 @@ Speech recognition requires launching from a server using HTTPS (e.g. using a py
 
 ## Include from a CDN
 ```
-<script src="https://cdn.jsdelivr.net/gh/IDMNYU/p5.js-speech@0.0.2/lib/p5.speech.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/IDMNYU/p5.js-speech@0.0.3/lib/p5.speech.js"></script>
 ```
 
 ## Examples
