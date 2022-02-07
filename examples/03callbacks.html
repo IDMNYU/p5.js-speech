@@ -12,6 +12,8 @@
 	myVoice.onPause = speechPaused; // not working
 	myVoice.onResume = speechResumed; // not working
 	myVoice.onEnd = speechEnded;
+		
+	myVoice.interrupt  = true;
 
 	var lyric = "now is the winter of our discontent.  made glorious summer by this sun of york.  and all the clouds that loured upon our house.  in the deep bosom of the ocean buried.";
 
@@ -50,7 +52,7 @@
 	function speechStarted()
 	{
 		background(0, 255, 0);
-		speakbutton.elt.innerHTML = 'Stop';
+		speakbutton.elt.innerHTML = 'Stop';//could change to 'Pause', to check pause and resume function
 	}
 
 	// not working...
